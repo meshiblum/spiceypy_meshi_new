@@ -1,0 +1,1 @@
+This is the repository for my new project of solving the trajectory of a spaceship from earth to the moon using the SPICE kernels and spiceypy.
