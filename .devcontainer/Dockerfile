@@ -25,5 +25,9 @@ RUN wget https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/package
     # Install SpiceyPy using pip
 RUN pip3 install spiceypy
 
+# install git 
+RUN apt-get -y update
+RUN apt-get -y install git
+
 # Print cd cSpiceyPy version for verification
 RUN python3 -c "import spiceypy as spice; print('SpiceyPy version:', spice.tkvrsn('TOOLKIT'))"
