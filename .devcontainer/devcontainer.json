@@ -6,8 +6,8 @@
 			"WORKSPACE": "${containerWorkspaceFolder}"
 		}
 	},
-	// "remoteUser": "ros",
-	"runArgs": [
+	//"remoteUser": "vscode",
+		"runArgs": [
 		"--network=host",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
