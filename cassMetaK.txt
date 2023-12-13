@@ -1,0 +1,12 @@
+   \begindata
+   KERNELS_TO_LOAD=(
+   'naif0009.tls',
+   'cas00084.tsc',
+   'cpck05Mar2004.tpc',
+   '020514_SE_SAT105.bsp',
+   '981005_PLTEPH-DE405S.bsp',
+   '030201AP_SK_SM546_T45.bsp',
+   '04135_04171pc_psiv2.bc',
+   'cas_v37.tf',
+   'cas_iss_v09.ti')
+   \begintext
