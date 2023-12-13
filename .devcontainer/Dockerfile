@@ -30,7 +30,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
   && rm -rf /var/lib/apt/lists/* \
   && echo "source /usr/share/bash-completion/completions/git" >> /home/$USERNAME/.bashrc
 
-    # Download and install the SPICE Toolkit
+# Download and install the SPICE Toolkit
 RUN wget https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z && \
     tar -xvf cspice.tar.Z && \
     wget https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/importCSpice.csh && \
@@ -39,8 +39,11 @@ RUN wget https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/package
     ./importCSpice.csh && \
     /bin/bash -f importCSpice.csh
 
-    # Install SpiceyPy using pip
+# Install SpiceyPy using pip
+RUN pip3 install scipy
 RUN pip3 install spiceypy
+RUN pip3 install matplotlib
+
 
 # install git 
 RUN apt-get -y update
